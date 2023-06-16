@@ -1,9 +1,13 @@
 import React from "react"
 import { styled } from "styled-components"
-import Contact from "./component/Contact"
-import Hero from "./component/Hero"
-import Who from "./component/Who"
-import Works from "./component/Works"
+import Hero from "./sections/Hero"
+import Who from "./sections/Who"
+import Works from "./sections/Works"
+import Contact from "./sections/Contact"
+import Test from "./treejsCanvas/Test"
+import Stacks from "./sections/Stacks"
+
+// import Test from "./component/Test"
 
 const Container = styled.div`
   height: 100vh;
@@ -13,9 +17,8 @@ const Container = styled.div`
   scrollbar-width: none;
 
   color: white;
-  background: url("/img/bg-img2.jpg");
+  background: url("/img/background/bg-img3.jpg");
   background-repeat: round;
-  
 
   &::-webkit-scrollbar {
     display: none;
@@ -27,8 +30,10 @@ function App() {
     <Container>
       <Hero/>
       <Who/>
-      <Works/>
+      <Stacks/>
       <Contact/>
+      {/* <Works/>
+      <Test /> */}
     </Container>
   )
 }

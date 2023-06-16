@@ -13,7 +13,7 @@ const markers = [
   { markerOffset: 1, name: "Brasil - Recife, PE", coordinates: [-34.8813, -8.05428] }
 ];
 
-const Map = () => {
+export const Map = () => {
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
