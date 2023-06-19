@@ -20,7 +20,8 @@ export const Left = styled.div`
   justify-content: flex-end;
 `
 export const Title = styled.h1`
-  font-weight: 100;
+  font-weight: bold;
+  font-size: 70px;
 `
 export const Form = styled.form`
   width: 500px;

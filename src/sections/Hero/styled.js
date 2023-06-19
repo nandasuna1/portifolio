@@ -24,14 +24,19 @@ export const LeftTop = styled.div`
 `
 export const Title = styled.h1`
   font-size: 74px;
+  letter-spacing: -2px;
+  line-height: 70px;
+  margin-bottom: 35px;
 `
 export const WhatWeDo = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   gap: 10px;
 `
 export const SubTitle = styled.h2`
-  color: #d1007d;
+  color: #ff007d;
+  font-size: 30px;
 `
 export const RightBottom = styled.div`
   flex: 3;
@@ -39,7 +44,7 @@ export const RightBottom = styled.div`
 `
 export const Description = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: white;
 `
 export const Img = styled.img`
   width: 800px;

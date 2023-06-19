@@ -3,10 +3,10 @@ import { Img, Link } from './styled'
 
 export default function LinkComponent({size = 'auto', hasIcon = false, children, link='#', iconsize=50}) {
 
-  console.log(size);
   const iconSrc = {
     'GitHubLogo': 'img/icons/GitHub-Logo.png',
-    'DocLogo': 'img/icons/Doc-Logo.png'
+    'DocLogo': 'img/icons/Doc-Logo.png',
+    'Linkedin': 'img/icons/linkedin.png'
   }
   return (
     <>

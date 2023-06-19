@@ -3,9 +3,9 @@ import { Button, Img } from './styled'
 
 export default function ButtonComponent({size = 'auto', hasIcon = false, children}) {
 
-  console.log(size);
   const iconSrc = {
-    'GitHubLogo': 'img/icons/GitHub-Logo.png'
+    'GitHubLogo': 'img/icons/GitHub-Logo.png',
+    'Linkedin': 'img/icons/linkedin.png'
   }
   return (
     <>

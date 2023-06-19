@@ -26,12 +26,12 @@ export default function Contact() {
       <Container>
         <Left>
           <Form onSubmit={handleSubmit} ref={formRef}>
-            <Title>Contact Me</Title>
-            <Input placeholder='Name' name='name' />
+            <Title>Contato</Title>
+            <Input placeholder='Nome' name='name' />
             <Input placeholder='Email' name='email'/>
-            <TextArea placeholder='Write your message ' name='message' rows={10}/>
-            <Button type='submit' size={200}>Send Email</Button>
-            {success && "Your message has been sent! Well get back to you soon"}
+            <TextArea placeholder='Escreva sua mensagem ' name='message' rows={10}/>
+            <Button type='submit' size={200}>Enviar Email</Button>
+            {success && "Sua mensagem foi enviada, logo entrarei em contato com você"}
           </Form>
         </Left>
         <Right>

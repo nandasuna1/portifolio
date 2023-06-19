@@ -1,8 +1,8 @@
 import { styled } from "styled-components"
 
 export const Section = styled.div`
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 `
 
 export const Container = styled.div`
@@ -33,8 +33,18 @@ export const List = styled.ul`
     gap: 50px;
 `
 
-export const ListItem = styled.li`
+export const ListItem = styled.button`
     cursor: pointer;
+    list-style: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    &:hover {
+      color: #d1007d;
+    }
 `
 
 export const Icons = styled.div`

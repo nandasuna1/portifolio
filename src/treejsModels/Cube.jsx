@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber'
 
 export default function Cube() {
     const textRef = useRef()
-    const textString = 'Autodidata\nCuriosa\nColaborativa'
+    const textString = 'Curiosa\nAutodidata\nColaborativa'
     // make text move
     // useFrame(state => (textRef.current.position.x = 2 * Math.sin(state.clock.elapsedTime)))
   return (

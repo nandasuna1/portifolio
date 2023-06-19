@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber'
 import { Container, Description, Img, LeftTop, RightBottom, Section, SubTitle, Title, WhatWeDo } from './styled'
 import { Button } from '../../component/ButtonComponent/styled'
 import ButtonComponent from '../../component/ButtonComponent'
+import LinkComponent from '../../component/Link'
 
 
 export default function Hero() {
@@ -16,13 +17,17 @@ export default function Hero() {
         <LeftTop>
           <Title>Never Stop Learning</Title>
           <WhatWeDo>
-            <SubTitle>What we Do</SubTitle>
+          <SubTitle>Hello World, Fernanda aqui!</SubTitle>
+          <Description>
+          Desenvolvedora web e mobile apaixonada por frontend e design, transformando conceitos em interfaces incríveis. 
+          </Description>
           </WhatWeDo>
-          <Description>We create a beaultiful world full of tech</Description>
-          <ButtonComponent size='fit-content'>Learn More</ButtonComponent>
+          <LinkComponent size='fit-content' hasIcon='Linkedin' iconsize={20} link='https://www.linkedin.com/in/fbp30/'>
+            Learn More
+          </LinkComponent>
         </LeftTop>
         <RightBottom>
-          <Canvas >
+          {/* <Canvas >
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1}/>
               <directionalLight position={[3,2,1]}/>
@@ -34,8 +39,8 @@ export default function Hero() {
                   speed={2}
                   />
               </Sphere>
-          </Canvas>
-          <Img src='./img/assets/f-dev.png' />
+          </Canvas> */}
+          <Img src='./img/assets/f-dev2.png' />
         </RightBottom>
       </Container>
     </Section>

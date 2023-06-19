@@ -19,6 +19,11 @@ export const Title = styled.h1`
 `
 export const Text = styled.p`
   font-size: 18px;
+  font-weight: bold;
+`
+export const IconCard = styled.p`
+  font-size: 18px;
+  font-weight: bold; 
 `
 
 export const StackSection = styled.div`
@@ -33,20 +38,41 @@ export const StackSection = styled.div`
 export const ListIcons = styled.div`
   height: auto;
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-direction: column;
+  /* flex-wrap: wrap-reverse; */
   justify-content: space-evenly;
-  gap: 50px;
+  gap: 20px;
 `
 export const IconWrap = styled.div`
   width: auto;
-  padding: 50px 20px;
-  background-color: rgba(255,255,255,0.1);
-  border-radius: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
 
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
+  
+  color: #d1007d;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #fff;
+  transition: .5s;
+  &:hover {
+      color: #000;
+      
+      background: #d1007d;
+      
+      box-shadow: 0 0 50px #d1007d;
+  }
 `
 
 export const IconName = styled.h3`
@@ -56,12 +82,25 @@ export const RightBottom = styled.div`
   flex: 2;
   height: 100%;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
 `
 
 export const LeftTop = styled.div`
   flex: 3;
   display: flex;
+  height: 100%;
+  width: 100%;
+`
+
+export const CanvasWrap = styled.div`
+  height: 90%;
+  width: 100%;
+
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
 `

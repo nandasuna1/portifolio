@@ -6,13 +6,12 @@ import { TextureLoader } from 'three'
 export default function Paralelepipedo({techName = 'ReactNative'}) {
 
     const projectImgPath = {
-        'React': "img/icons/React-icon.svg",
-        'HTML': "img/icons/React-icon.svg",
-        'CSS': "img/icons/React-icon.svg",
-        'Node': "img/icons/React-icon.svg",
-        'ReactNative': "img/projects/wApp.jpeg",
-        'StyledComponents': "img/icons/React-icon.svg",
-        'Jest': "img/icons/React-icon.svg",
+        'CryptoApp': "img/projects/criptoVerse.png",
+        'Pokedex': "img/projects/pokedex.png",
+        'VueMovies': "img/projects/vueMovies.png",
+        'WeatherApp': "img/projects/wApp.jpeg",
+        'EventPlataform': "img/projects/eventplataform.png",
+        'IgniteTeams': "img/projects/igniteteams.png",
     }
 
     // Cria a textura

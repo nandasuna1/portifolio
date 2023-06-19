@@ -21,7 +21,9 @@ export const LeftTop = styled.div`
 export const Description = styled.p`
   font-size: 20px;
   color: #fff;
-  text-align: justify;
+  text-align: start;
+
+  letter-spacing: 2px;
 `
 export const Img = styled.img`
   width: 800px;
@@ -41,8 +43,6 @@ export const Img = styled.img`
     }
   }
 `
-export const Line = styled.img``
-
 
 export const RightBottom = styled.div`
   flex: 1;
@@ -50,6 +50,9 @@ export const RightBottom = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+
+  /* background-color: rgba(0,0,0,0.5);
+  padding:0  100px; */
 `
 export const Title = styled.h1`
   font-size: 74px;
@@ -61,7 +64,7 @@ export const WhatWeDo = styled.div`
   gap: 10px;
 `
 export const SubTitle = styled.h2`
-  color: #d1007d;
+  color: #ff007d;
 `
 
 export const Links = styled.div`
@@ -77,11 +80,18 @@ export const List = styled.ul`
 export const ListItem = styled.li`
     font-size: 74px;
     font-weight: bold;
+    
     cursor: pointer;
+
     color: transparent;
     -webkit-text-stroke: 2px white;
+
     position: relative;
+
     width: fit-content;
+
+    letter-spacing: 1px;
+    line-height: 100%;
 
     &:after {
       content: "${(props) => props.text}";

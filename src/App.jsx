@@ -6,6 +6,7 @@ import Works from "./sections/Works"
 import Contact from "./sections/Contact"
 import Test from "./treejsCanvas/Test"
 import Stacks from "./sections/Stacks"
+import Navbar from "./component/Navbar"
 
 // import Test from "./component/Test"
 
@@ -17,17 +18,22 @@ const Container = styled.div`
   scrollbar-width: none;
 
   color: white;
-  background: url("/img/background/bg-img3.jpg");
+  background: url("/img/background/bg-img2.jpg");
   background-repeat: round;
 
   &::-webkit-scrollbar {
     display: none;
   }
 `
+const ContainerSection = styled.div`
+  height: 80vh;
+  background-color: red;
+`
 function App() {
 
   return (
     <Container>
+      {/* <Navbar/> */}
       <Hero/>
       <Who/>
       <Stacks/>
