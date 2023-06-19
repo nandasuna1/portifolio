@@ -6,7 +6,7 @@ export const Section = styled.div`
 `
 
 export const Container = styled.div`
-    width: 1400px;
+    width: 85%;
     /* background-color: rgba(0,0,0,0.5); */
     display: flex;
     justify-content: space-between;
