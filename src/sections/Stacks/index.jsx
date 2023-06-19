@@ -1,16 +1,6 @@
-import React, { useState } from 'react'
-import { CanvasWrap, Container, IconCard, IconName, IconWrap, LeftTop, ListIcons, RightBottom, Section, StackSection, Text, Title } from './styled';
-import IconComponent from '../../component/Icon';
+import React, { useEffect, useState } from 'react'
+import { CanvasWrap, Container, IconCard, IconName, IconWrap, LeftTop, ListIcons, RightBottom, Section, Text, Title } from './styled';
 import StackCanva from '../../treejsCanvas/StackCanva';
-
-const data = [
-    'Web',
-    'Mobile',
-    'Design',
-    'Test',
-    'Development'
-];
-
 
 
 export default function Stacks() {
@@ -40,22 +30,24 @@ export default function Stacks() {
       description: 'Aplicativo que fornece visual de centenas de Pokemons, construido: Vue, Javascript, axios, consumo de api.'
     },
   ]
-  const [tech, setTech] = useState({name: iconData[0].label, description: iconData[0].description});
+
+  const [tech, setTech] = useState({name:'', description:''});
 
   const handleOnClick = (value) => {
     // e.preventDefault();
     setTech({name: value.label, description: value.description})
   }
 
-  
 
+  console.log(tech);
   return (
-    <Section id='Projects' >
+    <Section id='Projects'>
         <Container>
             {/* <Title>Stack</Title> */}
             <LeftTop>
               <CanvasWrap>
                 <StackCanva techName={tech.name}/>
+              {!tech.name.length && <Text>Clique em um projeto e descubra!</Text>}
                 <Text>{tech.name}: {tech.description}</Text>
               </CanvasWrap>
             </LeftTop>

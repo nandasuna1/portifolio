@@ -3,8 +3,9 @@ import { PerspectiveCamera, RenderTexture, Text } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { TextureLoader } from 'three'
 
-export default function Paralelepipedo({techName = 'ReactNative'}) {
+export default function Paralelepipedo({techName = 'WeatherApp'}) {
 
+    console.log(techName);
     const projectImgPath = {
         'CryptoApp': "img/projects/criptoVerse.png",
         'Pokedex': "img/projects/pokedex.png",

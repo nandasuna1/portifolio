@@ -8,7 +8,7 @@ export const Section = styled.div`
 `
 
 export const Container = styled.div`
-  width: 1400px;
+  width: 85%;
   display: flex;
   justify-content : center ;
   align-items: center;

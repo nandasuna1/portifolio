@@ -12,11 +12,12 @@ import Navbar from "./component/Navbar"
 
 const Container = styled.div`
   height: 100vh;
+  width: 100%;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
   scrollbar-width: none;
-
+  
   color: white;
   background: url("/img/background/bg-img2.jpg");
   background-repeat: round;
@@ -25,21 +26,14 @@ const Container = styled.div`
     display: none;
   }
 `
-const ContainerSection = styled.div`
-  height: 80vh;
-  background-color: red;
-`
 function App() {
 
   return (
     <Container>
-      {/* <Navbar/> */}
       <Hero/>
       <Who/>
       <Stacks/>
       <Contact/>
-      {/* <Works/>
-      <Test /> */}
     </Container>
   )
 }

@@ -12,7 +12,7 @@ import LinkComponent from '../../component/Link'
 export default function Hero() {
   return (
     <Section>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Container>
         <LeftTop>
           <Title>Never Stop Learning</Title>

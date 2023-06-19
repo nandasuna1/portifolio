@@ -11,7 +11,7 @@ export const Section = styled.div`
 export const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 85%;
   display: flex;
   justify-content: space-between;
 `
