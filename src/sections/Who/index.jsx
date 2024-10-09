@@ -1,44 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Description,
-  LeftTop,
+  Left,
   Links,
-  List,
-  ListItem,
-  RightBottom,
+  MyImg,
+  Right,
   Section,
   SubTitle,
   Title,
-  WhatWeDo,
+  TitleWrapper,
 } from "./styles";
-import WhoAmI from "../../treejsCanvas/WhoAmI";
 import LinkComponent from "../../component/Link";
 
-// import {GrDocumentDownload} from 'react-icons/gr'
-export default function Who() {
-  const data = [ "Curiosa", "Autodidata", "Colaborativa"];
+export default function Who({ refProps }) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    handleWindowResize();
+    console.log(window.innerWidth);
+
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [window.innerWidth]);
 
   return (
-    <Section>
+    <Section ref={refProps}>
       <Container>
-        <LeftTop>
-          <WhoAmI />
-        </LeftTop>
-        <RightBottom>
-          <List>
-            {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>{item}</ListItem>
-            ))}
-          </List>
-          <WhatWeDo>
-            <SubTitle>Quem sou</SubTitle>
-          </WhatWeDo>
+        <Left>
+          <MyImg src="/img/background/profileWBg.jpg" />
+          {windowWidth < 750 && (
+            <TitleWrapper>
+              <Title>- Sobre - </Title>
+              <SubTitle>Criando soluções desde 2021 </SubTitle>
+            </TitleWrapper>
+          )}
+        </Left>
+        <Right>
+          {windowWidth >= 700 && (
+            <TitleWrapper>
+              <Title>- Sobre - </Title>
+              <SubTitle>Criando soluções desde 2021 </SubTitle>
+            </TitleWrapper>
+          )}
           <Description>
-            Apaixonada por adquirir conhecimento, busco me
-            aprimorar e no tempo livre explorar novas tecnologias para meu
-            crescimento pessoal e profissional. Adaptável a ambientes em
-            evolução, pronta para enfrentar novos desafios.
+            Sou desenvolvedora de software desde 2021, atuando em diversos
+            setores, incluindo healthcare, gestão empresarial e atualmente como
+            consultora em uma multinacional. Minha trajetória me permitiu
+            colaborar em projetos que impactam diretamente a eficiência de
+            empresas e a qualidade de vida das pessoas, especialmente através do
+            uso de tecnologias inovadoras. A paixão por tecnologia e
+            desenvolvimento é o que impulsiona meu desejo de criar soluções que
+            realmente fazem a diferença. Ao longo da minha carreira, Minha
+            abordagem foca em entregar resultados sólidos, sempre com foco na
+            qualidade do código e na experiência do usuário.
           </Description>
           <Links>
             <LinkComponent
@@ -48,7 +69,6 @@ export default function Who() {
             >
               Ver Projetos
             </LinkComponent>
-            {/* <GrDocumentDownload/> */}
             <LinkComponent
               hasIcon="DocLogo"
               size="fit-content"
@@ -58,7 +78,7 @@ export default function Who() {
               Curriculo
             </LinkComponent>
           </Links>
-        </RightBottom>
+        </Right>
       </Container>
     </Section>
   );

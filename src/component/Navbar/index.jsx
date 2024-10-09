@@ -1,31 +1,57 @@
-import React from 'react'
-import { Container, Icon, Icons, Links, List, ListItem, Logo, Section } from './styled'
-import ButtonComponent from '../ButtonComponent'
-import LinkComponent from '../Link'
+import React, { useEffect, useState } from "react";
+import { Icons, Links, ListItem, Section } from "./styled";
+import LinkComponent from "../Link";
 
-export default function Navbar() {
-
-  const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
+export default function Navbar({ scrollRefFn, refs }) {
+  const handleClick = (ref) => {
+    scrollRefFn(ref);
   };
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    handleWindowResize();
+    console.log(window.innerWidth);
+
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [window.innerWidth]);
 
   return (
-    <Section>
-      <Container>
+    windowWidth > 750 && (
+      <Section>
         <Links>
-        <Logo src="./img/icons/logo4-no-bg.png"/>
-        <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Quem sou eu</ListItem>
-            <ListItem  onClick={handleClick}>Projetos</ListItem>
-            <ListItem>Contato</ListItem>
-        </List>
+          <ListItem
+            type="button"
+            id="who"
+            onClick={() => handleClick(refs.whoRef)}
+          >
+            Quem sou eu
+          </ListItem>
+          <ListItem
+            type="button"
+            id="contact"
+            onClick={() => handleClick(refs.contactRef)}
+          >
+            Contato
+          </ListItem>
         </Links>
         <Icons>
-            <LinkComponent iconsize={20} hasIcon='DocLogo' link='https://drive.google.com/uc?export=download&id=1ezYioX1eGyQYuWtB4u8OMyEDyCaB8CcE'>Download CV</LinkComponent>
+          <LinkComponent
+            iconsize={20}
+            hasIcon="DocLogo"
+            link="https://drive.google.com/uc?export=download&id=1ezYioX1eGyQYuWtB4u8OMyEDyCaB8CcE"
+          >
+            Curriculo
+          </LinkComponent>
         </Icons>
-      </Container>
-    </Section>
-  )
+      </Section>
+    )
+  );
 }
