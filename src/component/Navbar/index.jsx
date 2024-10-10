@@ -42,15 +42,7 @@ export default function Navbar({ scrollRefFn, refs }) {
             Contato
           </ListItem>
         </Links>
-        <Icons>
-          <LinkComponent
-            iconsize={20}
-            hasIcon="DocLogo"
-            link="https://drive.google.com/uc?export=download&id=1ezYioX1eGyQYuWtB4u8OMyEDyCaB8CcE"
-          >
-            Curriculo
-          </LinkComponent>
-        </Icons>
+        <Icons></Icons>
       </Section>
     )
   );

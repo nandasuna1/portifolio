@@ -69,14 +69,6 @@ export default function Who({ refProps }) {
             >
               Ver Projetos
             </LinkComponent>
-            <LinkComponent
-              hasIcon="DocLogo"
-              size="fit-content"
-              link="https://drive.google.com/uc?export=download&id=1ezYioX1eGyQYuWtB4u8OMyEDyCaB8CcE"
-              iconsize={25}
-            >
-              Curriculo
-            </LinkComponent>
           </Links>
         </Right>
       </Container>
