@@ -21,7 +21,7 @@ export default function Home() {
       <Body>
         <Hero refProps={pageRefs.heroRef} />
         <Who refProps={pageRefs.whoRef} />
-        <Contact refProps={pageRefs.contactRef} />
+        {/* <Contact refProps={pageRefs.contactRef} /> */}
       </Body>
     </Container>
   );

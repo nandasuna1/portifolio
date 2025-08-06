@@ -1,20 +1,18 @@
 import { styled } from "styled-components";
-export const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-`;
+import { COLORS } from "../../colors";
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
+  background-color:${COLORS.darkBrown};
+  height: 90vh;
   display: flex;
+  padding: 0 50px;
+
+  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  margin: 5%;
 
-  gap: 50px;
-
-  @media screen and (max-width: 750px) {
-  }
+  justify-content: space-between;
+  color: #fff;
 `;
 
 export const Title = styled.h1`

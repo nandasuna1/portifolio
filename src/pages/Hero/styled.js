@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
+import { COLORS } from "../../colors";
 
 export const Container = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
+  height: 90vh;
   display: flex;
   padding: 0 50px;
 
@@ -11,16 +11,14 @@ export const Container = styled.div`
   align-items: center;
 
   justify-content: space-between;
-  background: url("/img/background/bg-notebook.png");
+  background-color: ${COLORS.darkBrown};
+  color: #fff;
 
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 `;
 
 export const Left = styled.div`
-  flex: 3;
-  flex-direction: column;
-  justify-content: start;
+  flex: 1;
+  justify-items: center;
   gap: 20px;
 
   @media screen and (max-width: 750px) {
@@ -37,9 +35,7 @@ export const Title = styled.p`
   line-height: 70px;
   font-weight: 400;
 
-  color: transparent;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: white;
+  color: ${COLORS.lightBrown};
 
   @media screen and (max-width: 750px) {
     font-size: 50px;
@@ -74,10 +70,7 @@ export const WhatWeDo = styled.div`
 
   padding-bottom: 10px;
 `;
-export const SubTitle = styled.h2`
-  color: #ffffff;
-  font-size: 30px;
-`;
+
 export const Right = styled.div`
   flex: 2;
   display: flex;
@@ -96,9 +89,26 @@ export const Description = styled.p`
     font-size: 18px;
   }
 `;
-export const Img = styled.img`
-  width: 800px;
-  height: 600px;
-  object-fit: contain;
-`;
-export const Line = styled.img``;
+
+
+export const Image = styled.img`
+width: 400px;
+height: 400px;
+object-fit: cover;
+border-radius: 100%;
+`
+export const Frame = styled.div`
+background-color: ${COLORS.lightBrown};
+width: 410px;
+height: 410px;
+border-radius: 100%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+`
+
+export const ButtonBox = styled.div`
+display: flex;
+gap: 30px
+`

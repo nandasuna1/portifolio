@@ -1,0 +1,14 @@
+{
+    "home": "Inicio",
+    "about": "Sobre Mim",
+    "contact": "Contato",
+    "description": "Desenvolvedora web e mobile apaixonada por frontend e design, transformando conceitos em interfaces incríveis.",
+    "loop": {
+        "0": "Especialista Frontend e Mobile",
+        "1": "UI/UX",
+        "2": "CI/CD",
+        "3":"React & React Native"
+    }
+    
+}
+  

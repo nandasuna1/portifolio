@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   CanvasWrap,
   Container,
   IconCard,
-  IconName,
   IconWrap,
   LeftTop,
   ListIcons,
@@ -13,7 +12,7 @@ import {
   Title,
 } from "./styled";
 
-export default function Stacks() {
+export default function Projects() {
   const iconData = [
     {
       label: "WeatherApp",
@@ -47,39 +46,17 @@ export default function Stacks() {
     },
   ];
 
-  const [tech, setTech] = useState({ name: "", description: "" });
-
-  const handleOnClick = (value) => {
-    // e.preventDefault();
-    setTech({ name: value.label, description: value.description });
-  };
-
-  console.log(tech);
   return (
     <Section id="Projects">
       <Container>
-        {/* <Title>Stack</Title> */}
-        <LeftTop>
-          <CanvasWrap>
-            {!tech.name.length && <Text>Clique em um projeto e descubra!</Text>}
-            <Text>
-              {tech.name}: {tech.description}
-            </Text>
-          </CanvasWrap>
-        </LeftTop>
+        <LeftTop></LeftTop>
         <RightBottom>
           <Title>Projetos</Title>
-          <ListIcons>
-            {iconData &&
-              iconData.map((icon, index) => (
-                <IconWrap
-                  key={icon.label}
-                  onClick={() => handleOnClick(iconData[index])}
-                >
-                  <IconCard>{icon.label}</IconCard>
-                </IconWrap>
-              ))}
-          </ListIcons>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.linkedin.com/feed/update/urn:li:activity:7264719404808982528/" height="500" width="100%" frameborder="0" allowfullscreen="" title="LinkedIn Post"></iframe>`,
+            }}
+          />
         </RightBottom>
       </Container>
     </Section>

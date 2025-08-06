@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Icons, Links, ListItem, Section } from "./styled";
+import {  Links, ListItem } from "./styled";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-export default function Navbar({ scrollRefFn, refs }) {
+export default function NewNavbar() {
   const { i18n } = useTranslation();
   const navigate = useNavigate()
   const[lang, setLang] = useState('en')
-  const handleClick = (ref) => {
-    scrollRefFn(ref);
-  };
+  const { t } = useTranslation();
+
 
   const changeLanguage = () => {
     const newLang = lang === 'en' ? 'pt' : 'en'
@@ -35,28 +34,26 @@ export default function Navbar({ scrollRefFn, refs }) {
 
   return (
     windowWidth > 750 && (
-      <Section>
         <Links>
           <ListItem
             type="button"
-            id="who"
-            onClick={() => handleClick(refs.whoRef)}
+            id="home"
+            onClick={() => navigate('/')}
           >
-            Quem sou eu
+            {t('home')}
           </ListItem>
+
           <ListItem
             type="button"
             id="contact"
             onClick={() => navigate('contact')}
           >
-            Contato
+            {t('contact')}
           </ListItem>
           <ListItem onClick={changeLanguage}>
             {lang === 'en' ? 'Mudar para 🇧🇷' : 'Change to 🇺🇸'}
           </ListItem>
         </Links>
-        <Icons></Icons>
-      </Section>
     )
   );
 }

@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "i18next": "^25.3.2",
     "react": "^18.2.0",
     "react-app": "file:",
     "react-dom": "^18.2.0",
+    "react-i18next": "^15.6.1",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.26.2",
-    "styled-components": "^6.0.0-rc.3"
+    "styled-components": "^6.0.0-rc.3",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

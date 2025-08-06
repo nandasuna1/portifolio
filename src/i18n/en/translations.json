@@ -1,0 +1,13 @@
+{
+    "home": "Home",
+    "about": "About Me",
+    "contact": "Contact",
+    "description": "Hi! I’m Fernanda, a Frontend and Mobile Developer passionate about creating elegant and efficient solutions that enhance user experiences.",
+    "loop": {
+        "0": "Consultant Developer",
+        "1": "UI/UX",
+        "2": "CI/CD",
+        "3":"React & React Native Specialist"       
+    }
+}
+  

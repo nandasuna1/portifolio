@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Container, Form, Input, Section, TextArea, Title } from "./styled";
+import { Container, Form, Input, TextArea, Title } from "./styled";
 import { Button } from "../../component/ButtonComponent/styled";
 
-export default function Contact({ refProps }) {
+export default function Contact() {
   const formRef = useRef();
   const [success, setSuccess] = useState(null);
   const handleSubmit = (e) => {
@@ -29,8 +29,7 @@ export default function Contact({ refProps }) {
   };
 
   return (
-    <Section ref={refProps}>
-      <Container>
+    <Container>
         <Form onSubmit={handleSubmit} ref={formRef}>
           <Title>Contato</Title>
           <Input placeholder="Nome" name="name" />
@@ -46,7 +45,6 @@ export default function Contact({ refProps }) {
           {success &&
             "Sua mensagem foi enviada, logo entrarei em contato com você"}
         </Form>
-      </Container>
-    </Section>
+    </Container>
   );
 }

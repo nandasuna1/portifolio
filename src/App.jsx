@@ -1,13 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
-import Home from "./pages/Home";
+import './i18n';
+import Contact from "./pages/Contact";
+import Hero from "./pages/Hero";
+import NewNavbar from "./component/NewNavbar";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
     <Router>
+      <NewNavbar/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Hero />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/projects" element={<Projects />} /> */}
+        {/* <Route path="/media" element={<Media />} /> */}
+        <Route path="/projects" element={<Projects />} />
+
         <Route path="/notFound" element={<NotFound />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
