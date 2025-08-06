@@ -24,11 +24,6 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
-
-  @media screen and (max-width: 750px) {
-    /* height: 100%; */
-    width: 80%;
-  }
 `;
 export const Input = styled.input`
   padding: 20px;

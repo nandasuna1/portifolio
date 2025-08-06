@@ -39,12 +39,8 @@ export default function Projects() {
       description:
         "Aplicativo que fornece informações sobre filmes e séries, contruido com: Vue, Javascript, Jest, Styped-components, Redux, consumo de api.",
     },
-    {
-      label: "Pokedex",
-      description:
-        "Aplicativo que fornece visual de centenas de Pokemons, construido: Vue, Javascript, axios, consumo de api.",
-    },
   ];
+
 
   return (
     <Section id="Projects">
@@ -52,11 +48,11 @@ export default function Projects() {
         <LeftTop></LeftTop>
         <RightBottom>
           <Title>Projetos</Title>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `<iframe src="https://www.linkedin.com/feed/update/urn:li:activity:7264719404808982528/" height="500" width="100%" frameborder="0" allowfullscreen="" title="LinkedIn Post"></iframe>`,
-            }}
-          />
+          {iconData.map(data => {
+            return (
+              <div>{data.label} - {data.description}</div>
+            )
+          })}
         </RightBottom>
       </Container>
     </Section>

@@ -14,16 +14,15 @@ import {
   WhatWeDo,
 } from "./styled";
 import Typewriter from "typewriter-effect";
-
 import LinkComponent from "../../component/Link";
 import { useTranslation } from 'react-i18next';
 import image from '/img/background/me.jpeg'
 
-export default function Hero({ refProps }) {
+export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <Container ref={refProps}>
+    <Container>
       <Left>
         <Frame>
           <Image src={image} />
@@ -57,14 +56,14 @@ export default function Hero({ refProps }) {
           size="50px"
           hasIcon="Linkedin"
           iconsize={20}
-          link="https://www.linkedin.com/in/fbp30/"
+          link="https://www.linkedin.com/in/nandasuna/"
         />
 
         <LinkComponent
           size="50px"
           hasIcon="GitHubLogo"
           iconsize={50}
-          link="https://www.linkedin.com/in/fbp30/"
+          link="https://github.com/nandasuna1"
         />
         </ButtonBox>
       </Right>

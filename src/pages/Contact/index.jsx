@@ -2,10 +2,13 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Container, Form, Input, TextArea, Title } from "./styled";
 import { Button } from "../../component/ButtonComponent/styled";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const formRef = useRef();
   const [success, setSuccess] = useState(null);
+  const { t } = useTranslation();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,19 +35,21 @@ export default function Contact() {
     <Container>
         <Form onSubmit={handleSubmit} ref={formRef}>
           <Title>Contato</Title>
-          <Input placeholder="Nome" name="name" />
-          <Input placeholder="Email" name="email" />
+          <Input placeholder={t("contactPage.formName")} name="name" />
+          <Input placeholder={t("contactPage.formEmail")} name="email" />
           <TextArea
-            placeholder="Escreva sua mensagem "
+            placeholder={t("contactPage.formMessage")}
             name="message"
             rows={10}
           />
           <Button type="submit" size={200}>
-            Enviar Email
+          {t("contactPage.button")}
           </Button>
           {success &&
-            "Sua mensagem foi enviada, logo entrarei em contato com você"}
+            `${t("contactPage.success")}`
+            }
         </Form>
+
     </Container>
   );
 }

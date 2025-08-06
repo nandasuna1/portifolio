@@ -2,13 +2,26 @@
     "home": "Inicio",
     "about": "Sobre Mim",
     "contact": "Contato",
-    "description": "Desenvolvedora web e mobile apaixonada por frontend e design, transformando conceitos em interfaces incríveis.",
+    "description": "Trabalho com desenvolvimento de aplicações mobile e frontend desde 2021, atuando em empresas de diversos setores como saúde, gestão empresarial e, atualmente, em uma das maiores plataformas de entrega do Brasil. Foco em qualidade, experiência do usuário e impacto em produto. Busco constantemente evoluir tecnicamente, assumir papéis de liderança e internacionalizar minha carreira.",
     "loop": {
         "0": "Especialista Frontend e Mobile",
         "1": "UI/UX",
         "2": "CI/CD",
         "3":"React & React Native"
-    }
+    },
+    "notFound": {
+        "title": "Pagina não encontrada",
+        "description": "Ops, parece que o que você está procurando não está aqui...",
+        "button": "Voltar para o início"
+    },
+    "contactPage": {
+        "title": "Contato",
+        "formName": "Nome",
+        "formEmail": "Email",
+        "formMessage": "Mensagem",
+        "button": "Mandar email",
+        "success": "Sua mensagem foi enviada, logo entrarei em contato com você"
+      }
     
 }
   

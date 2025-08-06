@@ -5,7 +5,6 @@ import './i18n';
 import Contact from "./pages/Contact";
 import Hero from "./pages/Hero";
 import NewNavbar from "./component/NewNavbar";
-import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -14,9 +13,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/projects" element={<Projects />} /> */}
-        {/* <Route path="/media" element={<Media />} /> */}
-        <Route path="/projects" element={<Projects />} />
 
         <Route path="/notFound" element={<NotFound />} />
         <Route path="/*" element={<NotFound />} />

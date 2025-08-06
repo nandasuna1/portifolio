@@ -1,10 +1,13 @@
 import { styled } from "styled-components"
+import { COLORS } from "../../colors"
 
 export const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+  background: ${COLORS.darkBrown};
+  color: ${COLORS.lightBrown}
 `
 
 export const Container = styled.div`

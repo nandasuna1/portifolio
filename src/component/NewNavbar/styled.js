@@ -1,38 +1,63 @@
-import { styled } from "styled-components";
-import { COLORS } from "../../colors";
+import styled from 'styled-components';
+import { COLORS } from '../../colors';
 
-
-export const Links = styled.div`
+export const HeaderContainer = styled.header`
+  height: 10vh;
+  background-color: ${COLORS.darkBrown};
+  color: ${COLORS.lightBrown};
   display: flex;
   align-items: center;
-  gap: 50px;
-  background-color:${COLORS.darkBrown};
-  padding: 0 50px;
-  height: 10vh;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+`;
 
-  :last-of-type {
-    margin-left: auto;
-    margin-right: 0;
-  }
+export const NavLinks = styled.nav`
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  align-items: center;
 `;
 
 export const ListItem = styled.button`
-  cursor: pointer;
-  list-style: none;
-  background-color: transparent;
+  background: transparent;
   border: none;
   color: ${COLORS.lightBrown};
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
 
   &:hover {
     color: white;
   }
 `;
 
-export const Icons = styled.div`
-  display: flex;
-  align-items: center;
+export const Burger = styled.button`
+  background: transparent;
+  border: none;
+  color: ${COLORS.lightBrown};
+  cursor: pointer;
+  z-index: 11;
+`;
 
-  justify-self: right;
+export const Overlay = styled.div`
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.4);
+`;
+
+export const MobileMenu = styled.nav`
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  background-color: ${COLORS.darkBrown};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0;
 `;

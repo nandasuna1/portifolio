@@ -16,7 +16,7 @@
     "react-app": "file:",
     "react-dom": "^18.2.0",
     "react-i18next": "^15.6.1",
-    "react-icons": "^4.9.0",
+    "react-icons": "^4.12.0",
     "react-router-dom": "^6.26.2",
     "styled-components": "^6.0.0-rc.3",
     "typewriter-effect": "^2.22.0"

@@ -1,13 +1,18 @@
 import React from "react";
-import { Container, GoBack } from "./styled";
-
+import { Page, GoBack, Image } from "./styled";
+import image from '/img/icons/coffeAndCode.png'
+import { useTranslation } from "react-i18next";
 export default function NotFound() {
-  return (
-    <Container>
-      <h1>Site em Construção</h1>
-      <p>A página que você está tentando acessar ainda não existe :/</p>
+  const { t } = useTranslation();
 
-      <GoBack to="/">Voltar para a página inicial</GoBack>
-    </Container>
+  return (
+    <Page>
+
+      <Image src={image}  />
+      <h1>{t('notFound.title')}</h1>
+      <p>{t('notFound.description')}</p>
+
+      <GoBack to="/">{t('notFound.button')}</GoBack>
+    </Page>
   );
 }

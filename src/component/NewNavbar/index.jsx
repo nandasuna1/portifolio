@@ -1,59 +1,65 @@
-import React, { useEffect, useState } from "react";
-import {  Links, ListItem } from "./styled";
-import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import {
+  HeaderContainer,
+  NavLinks,
+  ListItem,
+  Burger,
+  MobileMenu,
+  Overlay,
+} from './styled';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function NewNavbar() {
-  const { i18n } = useTranslation();
-  const navigate = useNavigate()
-  const[lang, setLang] = useState('en')
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 750);
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const lang = i18n.language;
 
   const changeLanguage = () => {
-    const newLang = lang === 'en' ? 'pt' : 'en'
-    i18n.changeLanguage(newLang);
-    setLang(newLang)
+    i18n.changeLanguage(lang === 'en' ? 'pt' : 'en');
   };
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const handleWindowResize = () => {
-    setWindowWidth(window.innerWidth);
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 750);
+    if (window.innerWidth >= 750) setOpen(false);
   };
 
   useEffect(() => {
-    handleWindowResize();
-    console.log(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, [window.innerWidth]);
+  const Links = (
+    <>
+      <ListItem onClick={() => navigate('/')}>{t('home')}</ListItem>
+      <ListItem onClick={() => navigate('/contact')}>{t('contact')}</ListItem>
+      <ListItem onClick={changeLanguage}>
+        {lang === 'en' ? 'Mudar para 🇧🇷' : 'Change to 🇺🇸'}
+      </ListItem>
+    </>
+  );
 
   return (
-    windowWidth > 750 && (
-        <Links>
-          <ListItem
-            type="button"
-            id="home"
-            onClick={() => navigate('/')}
-          >
-            {t('home')}
-          </ListItem>
+    <HeaderContainer>
+      {isMobile ? (
+        <>
+          <Burger onClick={() => setOpen(!open)}>
+            {open ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </Burger>
 
-          <ListItem
-            type="button"
-            id="contact"
-            onClick={() => navigate('contact')}
-          >
-            {t('contact')}
-          </ListItem>
-          <ListItem onClick={changeLanguage}>
-            {lang === 'en' ? 'Mudar para 🇧🇷' : 'Change to 🇺🇸'}
-          </ListItem>
-        </Links>
-    )
+          {open && (
+            <>
+              <Overlay onClick={() => setOpen(false)} />
+              <MobileMenu>{Links}</MobileMenu>
+            </>
+          )}
+        </>
+      ) : (
+        <NavLinks>{Links}</NavLinks>
+      )}
+    </HeaderContainer>
   );
 }

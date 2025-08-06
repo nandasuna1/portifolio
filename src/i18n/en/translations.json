@@ -1,13 +1,27 @@
 {
-    "home": "Home",
-    "about": "About Me",
-    "contact": "Contact",
-    "description": "Hi! I’m Fernanda, a Frontend and Mobile Developer passionate about creating elegant and efficient solutions that enhance user experiences.",
-    "loop": {
-        "0": "Consultant Developer",
-        "1": "UI/UX",
-        "2": "CI/CD",
-        "3":"React & React Native Specialist"       
-    }
+  "home": "Home",
+  "about": "About Me",
+  "contact": "Contact",
+  "description": "I have been working with mobile and frontend application development since 2021, contributing to companies across various sectors such as healthcare, business management, and currently one of Brazil’s largest delivery platforms. I focus on code quality, user experience, and product impact. I'm constantly seeking to grow technically, take on leadership roles, and expand my career internationally.",
+  "loop": {
+    "0": "Consultant Developer",
+    "1": "UI/UX",
+    "2": "CI/CD",
+    "3": "React & React Native Specialist"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "It seams you what you are looking for is not here...",
+    "button": "Go back home"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "button": "Send email",
+    "success": "Your message was sent, soon i'll reach out to you "
+
+  }
+
 }
-  
