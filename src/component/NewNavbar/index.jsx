@@ -35,6 +35,7 @@ export default function NewNavbar() {
   const Links = (
     <>
       <ListItem onClick={() => navigate('/')}>{t('home')}</ListItem>
+      <ListItem onClick={() => navigate('/published-apps')}>{t('publishedApps.title')}</ListItem>
       <ListItem onClick={() => navigate('/contact')}>{t('contact')}</ListItem>
       <ListItem onClick={changeLanguage}>
         {lang === 'en' ? 'Mudar para 🇧🇷' : 'Change to 🇺🇸'}

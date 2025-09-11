@@ -21,6 +21,18 @@
         "formMessage": "Mensagem",
         "button": "Mandar email",
         "success": "Sua mensagem foi enviada, logo entrarei em contato com você"
+      },
+      "publishedApps": {
+        "title": "Apps Publicados",
+        "seeMore": "Ver mais",
+        "apps": {
+            "trainTimeTitle": "Train Time",
+            "trainTimeDescription": "Assuma o controle dos seus treinos com um poderoso timer de intervalos que mantém você focado e motivado do começo ao fim. Seja correndo, caminhando ou treinando com rodadas personalizadas, este app garante que você nunca perca o ritmo — mesmo com a tela desligada.",
+            "trainTimePrivacyPolicy": "O Train Timer respeita a sua privacidade.\nEste aplicativo não coleta, armazena ou compartilha quaisquer dados pessoais dos usuários.\nO app utiliza apenas recursos do dispositivo, como notificações, vibração e sons, estritamente para a funcionalidade do timer. Nenhuma informação do usuário é enviada para servidores externos ou utilizada para qualquer outra finalidade.\n\nAlterações nesta política: Podemos atualizar esta política ocasionalmente. Qualquer alteração será refletida nesta página.\n\nSe tiver dúvidas sobre esta política, entre em contato com o desenvolvedor através do e-mail fornecido na Play Store."
+        }
+      },
+      "publishedAppsDetails": {
+        "privacyPolicy": "Política de Privacidade"
       }
     
 }
