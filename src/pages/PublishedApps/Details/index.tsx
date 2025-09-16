@@ -1,7 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { publishedApps } from "../publishedAppsList";
-import { Container, Description, Image, Section, SubTitle, Title } from "./styles";
+import {
+  Container,
+  Description,
+  Image,
+  Section,
+  SubTitle,
+  Title,
+} from "./styles";
 import { useTranslation } from "react-i18next";
 import NotFound from "../../NotFound";
 export default function PublishedAppsDetails() {
@@ -18,12 +25,14 @@ export default function PublishedAppsDetails() {
       <Container>
         <Title>{t(publishedApp.label)}</Title>
         <Description>{t(publishedApp.description)}</Description>
-        <SubTitle>{t ('publishedAppsDetails.privacyPolicy')} - {t(publishedApp.label)}</SubTitle>
+        <SubTitle>
+          {t("publishedAppsDetails.privacyPolicy")} - {t(publishedApp.label)}
+        </SubTitle>
         <Description>{t(publishedApp?.privacyPolicy)}</Description>
       </Container>
-      <Container>
+      {/* <Container>
         <Image src={publishedApp?.image} />
-      </Container>
+      </Container> */}
     </Section>
   );
 }
